@@ -4,36 +4,41 @@ import { Box, HStack ,Image ,Menu,MenuButton,MenuItem ,MenuList ,Portal ,Text ,B
 
 
 import { TriangleDownIcon  } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <div>
 
-<Box display="flex" justifyContent="space-between" bg="rgb(47,155,219)" p={7} px={35} >
+<Box display="flex" justifyContent="space-between" bg="rgb(47,155,219)" p={10} px={35} >
 
 
+<Link to='/'>
 <Box>
     <Image src="https://cdn1.tripoto.com/assets/2.9/img/logo/tripoto.svg" alt="logo"></Image>
 </Box>
-
+</Link>
 
 <Box>
 
-    <HStack  fontWeight="bold" spacing="20px" >
+<HStack  fontWeight="bold" spacing="20px" py={10} >
+
 
 <Box>
 <Menu isLazy>
-  <MenuButton bg="rgb(47,155,219)" border="none" fontWeight="bold" fontSize="15">Open menu   <TriangleDownIcon></TriangleDownIcon> </MenuButton>
-  <MenuList >
-    {/* MenuItems are not rendered unless Menu is open */}
-    <MenuItem>New Window</MenuItem>
-    <MenuItem>Open Closed Tab</MenuItem>
-    <MenuItem>Open File</MenuItem>
-    <MenuItem>New Window</MenuItem>
-    <MenuItem>Open Closed Tab</MenuItem>
-    <MenuItem>Open File</MenuItem>
+  <MenuButton bg="rgb(47,155,219)" border="none" fontWeight="bold" fontSize="15"> Inspiration   <TriangleDownIcon></TriangleDownIcon> </MenuButton>
+  <MenuList fontWeight="bold" fontSize="15" >
+    <MenuItem p={10} border="none"> <Link to='/singapore'>Visit Singapore</Link> </MenuItem>
+    <MenuItem p={10} border="none"> <Link to='/beaches'>Beaches</Link> </MenuItem>
+    <MenuItem p={10} border="none"> Mountains </MenuItem>
+    <MenuItem p={10} border="none"> Herietage </MenuItem>
+    <MenuItem p={10} border="none"> Weakend Guide </MenuItem>
+    <MenuItem p={10} border="none"> Upcoming Festival </MenuItem>
+    <MenuItem p={10} border="none"> Honeymoon Packages </MenuItem>
   </MenuList>
 </Menu>
+
+
 </Box>
 
 
@@ -42,13 +47,12 @@ const Navbar = () => {
 
 
 <Box>
-<Menu isLazy >
-  <MenuButton bg="rgb(47,155,219)" border="none" fontWeight="bold" fontSize="15">Open menu   <TriangleDownIcon></TriangleDownIcon> </MenuButton>
-  <MenuList  >
-    {/* MenuItems are not rendered unless Menu is open */}
-    <MenuItem>New Window</MenuItem>
-    <MenuItem>Open Closed Tab</MenuItem>
-    <MenuItem>Open File</MenuItem>
+<Menu isLazy>
+  <MenuButton bg="rgb(47,155,219)" border="none" fontWeight="bold" fontSize="15"> Publish Trip   <TriangleDownIcon></TriangleDownIcon> </MenuButton>
+  <MenuList fontWeight="bold" fontSize="15" >
+    <MenuItem p={10} border="none"> Create New </MenuItem>
+    <MenuItem p={10} border="none"> Upload Photos /Videos </MenuItem>
+    <MenuItem p={10} border="none"> Import Blog </MenuItem>
   </MenuList>
 </Menu>
 </Box>

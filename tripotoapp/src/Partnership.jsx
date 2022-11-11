@@ -2,6 +2,7 @@ import React from 'react'
 import { Text,Box, Flex, Image } from '@chakra-ui/react'
 import axios  from "axios"
 import { useState ,useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 
 const Partnership = () => {
@@ -10,7 +11,7 @@ const Partnership = () => {
 
     useEffect( () =>{
 
-        axios.get(`https://avdhoot-fake-api.herokuapp.com/Package`)
+        axios.get(`https://avdhoot-fake-api.herokuapp.com/partnerships`)
         .then( (res) => setdata(res.data))
         .catch((err) => console.log(err))
 
@@ -23,16 +24,19 @@ const Partnership = () => {
 
 <h1 style={{textAlign:"left"}}>In the Spotlight: Partnerships</h1>
 
-<div style={{display:"grid" , gridTemplateColumns:"repeat(4,1fr)" ,gap:"20px"}}>
+<div style={{display:"grid" , gridTemplateColumns:"repeat(4,1fr)" ,gap:"10px" }}>
+
 {
-    data.map( (el) => <div key={el.id} style={{border:"2px solid black"}} >
+    data.map( (el) => <div key={el.id} >
 
-    <div>
-        <img src={el.image} width="100%"></img>
-        <h3>India Tourism </h3>
-        <h2>{el.title}</h2>
-    </div>
+<Link to={`/${el.id}`}>
+    <Box style={{textAlign:"left",padding:"5px"}}   >
+        <img src={el.image_top} style={{width:"100%" ,height:"250px" , borderRadius:"10px"}}></img>
 
+        <Text fontSize={18} fontWeight='bold' color='red' > India Tourism </Text>
+        <Text fontSize={20} fontWeight='bold' color='black'> {el.title}</Text>
+    </Box>
+ </Link>
 
 
     </div>)
