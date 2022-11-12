@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Box, HStack ,Image ,Menu,MenuButton,MenuItem ,MenuList ,Portal ,Text ,Button ,MenuGroup } from '@chakra-ui/react'
+import { Box, HStack ,Image ,Menu,MenuButton,MenuItem ,MenuList  } from '@chakra-ui/react'
 
 
 import { TriangleDownIcon  } from '@chakra-ui/icons'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -58,7 +58,7 @@ const Navbar = () => {
 </Box>
 
 
-<Box>Sign in</Box>
+<NavLink to='/login' end ><Box>Login</Box></NavLink>
 
 
 

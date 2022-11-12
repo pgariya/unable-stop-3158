@@ -2,7 +2,7 @@ import React from 'react'
 import { Text,Box, Flex, Image } from '@chakra-ui/react'
 import axios  from "axios"
 import { useState ,useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 const Partnership = () => {
@@ -29,14 +29,13 @@ const Partnership = () => {
 {
     data.map( (el) => <div key={el.id} >
 
-<Link to={`/${el.id}`}>
     <Box style={{textAlign:"left",padding:"5px"}}   >
-        <img src={el.image_top} style={{width:"100%" ,height:"250px" , borderRadius:"10px"}}></img>
-
+    <NavLink to={`/${el.id}`}>     <img src={el.image_top} style={{width:"100%" ,height:"250px" , borderRadius:"10px"}}></img>
+        </NavLink>
         <Text fontSize={18} fontWeight='bold' color='red' > India Tourism </Text>
         <Text fontSize={20} fontWeight='bold' color='black'> {el.title}</Text>
     </Box>
- </Link>
+ 
 
 
     </div>)
