@@ -45,10 +45,10 @@ if(loading) {
 
 
   return (
-    <Box width='70%'   display="flex" margin="auto" gap="20px" mt={30}>
+    <Box width='75%'   display="flex" margin="auto" gap="20px" mt={30}>
 
  
- <Box width='75%'  textAlign='left'>
+ <Box width='70%'  textAlign='left' p={20} style={{boxShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px" }}>
 
 
 <h2>{data.title}</h2>
@@ -70,26 +70,27 @@ if(loading) {
 
  </Box>
 
- <Box width='23%' height="450px"  style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}} >
+ <Box width='23%' height="550px"  style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}} >
 
  
  <Stack spacing={10} p={15}>
 
   <Text fontWeight='bold' >Want to book a similar trip?</Text>
-  <Input variant='outline' placeholder='Email'   />
-  <Input variant='filled' placeholder='Full Name' />
-  <Input variant='flushed' placeholder='Contact Number' />
+  <Input variant='outline' placeholder='Email'  p={5} />
+  <Input variant='filled' placeholder='Full Name' p={5} />
+  <Input variant='flushed' placeholder='Contact Number' p={5}/>
   <Input
  placeholder="Select Date and Time"
  size="md"
  type="datetime-local"
+ p={5}
 />
-  <Input variant='unstyled' placeholder='Departure City' />
+  <Input variant='unstyled' placeholder='Departure City' p={5}/>
 
-  <Input variant='outline' placeholder='Destination'  />
-  <Input variant='filled' placeholder='Budget Per Person' />
+  <Input variant='outline' placeholder='Destination'  p={5}/>
+  <Input variant='filled' placeholder='Budget Per Person' p={5}/>
   
-  <Select placeholder='Prefered Hotel Category' size="xl">
+  <Select placeholder='Prefered Hotel Category' size="xl" p={5}>
   <option value='option1'>2 Star</option>
   <option value='option2'>3 Star</option>
   <option value='option3'>4 Star</option>
@@ -100,7 +101,7 @@ if(loading) {
 
 <Checkbox defaultChecked color='black'> Booked </Checkbox>
 
-<Button bg='blue' color='white' border='none' p={5} borderRadius="10px" >Request Callback</Button>
+<Button bg='blue' color='white' border='none' p={10} fontWeight='bold' borderRadius="10px" >Request Callback</Button>
 
 
 </Stack>

@@ -29,27 +29,35 @@ const CardSlider = () => {
 <Text fontSize={30} fontWeight='bold' textAlign='left'>Plan You Next International Trip During November & December</Text>
 
 
-        <Box  border="2px solid" height="400px" display="grid"  gridTemplateColumns="repeat(4,1fr)" gap="10px" textAlign='left'>
+        <Box  height="350px" display="grid"  gridTemplateColumns="repeat(4,1fr)" gap="10px" textAlign='left'>
         <Box>
-            <img style={{width:"100%", height:"300px"}} src={links[count1+1]} alt="good" />
+            <img style={{width:"100%", height:"220px",borderRadius:"10px" }} src={links[count1+1]} alt="good" />
              <h3>Best Scuba Diving Spots In Indonesia</h3>
 
-
-
         </Box>
         <Box>
-            <img style={{width:"100%", height:"300px"}} src={links[count1+2]} alt="good" />
+            <img style={{width:"100%", height:"220px" ,borderRadius:"10px" }} src={links[count1+2]} alt="good" />
             <h3>Best Scuba Diving Spots In Indonesia</h3>
         </Box><Box>
-            <img style={{width:"100%", height:"300px"}} src={links[count1+3]} alt="good" />
+            <img style={{width:"100%", height:"220px" , borderRadius:"10px"}} src={links[count1+3]} alt="good" />
             <h3>Best Scuba Diving Spots In Indonesia</h3>
         </Box><Box>
-            <img style={{width:"100%", height:"300px"}} src={links[count1+4]} alt="good" />
+            <img style={{width:"100%", height:"220px" , borderRadius:"10px"}} src={links[count1+4]} alt="good" />
             <h3>Best Scuba Diving Spots In Indonesia</h3>
         </Box>
         </Box>
-        <Button bg="red" color="white" disabled={count1<1} onClick={()=>setcount1(count1-1)} > <ArrowLeftIcon></ArrowLeftIcon> </Button>
-        <Button bg="red" color="white" disabled={count1>links.length-7} onClick={()=>setcount1(count1+1)}   > <ArrowRightIcon></ArrowRightIcon></Button>
+
+<Box display='flex' justifyContent='space-between' mt='-250px' zIndex={2}>
+    
+<Box  textAlign='left'>
+        <Button bg='transparent' color="white" border='none' cursor='pointer' disabled={count1<1} onClick={()=>setcount1(count1-1)}  > <ArrowLeftIcon></ArrowLeftIcon> </Button>
+        </Box>
+        <Box textAlign='right'>
+        <Button bg='transparent' color="white" border='none' cursor='pointer' disabled={count1>links.length-7} onClick={()=>setcount1(count1+1)}  > <ArrowRightIcon></ArrowRightIcon></Button>
+        </Box>
+
+</Box>
+
 
 
     </div>

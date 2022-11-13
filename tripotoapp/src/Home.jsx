@@ -1,9 +1,12 @@
 import { Container ,Box, Flex, Spacer ,Image, Center ,Input ,InputRightElement ,Text,InputGroup ,Stack} from '@chakra-ui/react'
 import React from 'react'
+import { Link } from 'react-router-dom'
+import BudgetTour from './BudgetTour'
 import CardSlider from './CardSlider'
 import IndiaPlaces from './IndiaPlaces'
-
+import MindfulRetreat from './MindfulRetreat'
 import Partnership from './Partnership'
+import Slider from './Slider'
 
 
 const Home = () => {
@@ -22,11 +25,13 @@ style={{width:"40%" ,margin:"auto",fontSize:"15px" ,padding:"12px 15px" ,borderR
 
 
 
-<Container w="80%" border="2px solid red" margin="auto"  >
+<Container w="80%"  p={30} style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}  margin="auto"  >
 
 
 <Flex my={20}>
-<Box  > <Image src="https://cdn1.tripoto.com/media/filter/tst/img/311219/Image/1657192329_aa.png" alt="p1" w="100%"/> </Box>
+<Box  >  <Link to='/mindfulPage'>
+<Image src="https://cdn1.tripoto.com/media/filter/tst/img/311219/Image/1657192329_aa.png" alt="p1" w="100%"/>
+</Link>  </Box>
 <Spacer/>
 <Box > <Image src="https://cdn1.tripoto.com/media/filter/tst/img/311219/Image/1657192307_cc.png" alt="p2" w="100%" /></Box>
 <Spacer/>
@@ -39,6 +44,13 @@ style={{width:"40%" ,margin:"auto",fontSize:"15px" ,padding:"12px 15px" ,borderR
 
                 {/* Partnership section */}
 <Partnership/>
+
+
+
+            {/* slider section */}
+<Slider/>
+
+
 
 
 <Text fontSize={30} fontWeight='bold' textAlign='left'>Find Best Places to Visit in India in November & December</Text>
@@ -55,6 +67,22 @@ style={{width:"40%" ,margin:"auto",fontSize:"15px" ,padding:"12px 15px" ,borderR
                 {/* card slider */}
                 <CardSlider/>
 
+
+                <Box>
+  <Image src='https://cdn1.tripoto.com/media/filter/nxxl/img/2215463/Image/1666956495_indonesia_1.jpg' alt='india group' width='100%' mt='220px'/>
+</Box>
+
+
+
+<Text fontSize={30} fontWeight='bold' textAlign='left'>Book Budget Tour Packages Curated For You</Text>
+        {/* Budget tour packages */}
+
+<BudgetTour/>
+
+
+<Text fontSize={30} fontWeight='bold' textAlign='left'>Travel and Learn with Tripoto's Mindful Retreats</Text>
+          {/* Mindful Retreat.. */}
+<MindfulRetreat/>
 
 
 

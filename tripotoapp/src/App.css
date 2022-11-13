@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+
+.foot_hov:hover {
+ color: red
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
