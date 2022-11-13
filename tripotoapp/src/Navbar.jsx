@@ -35,7 +35,7 @@ Navigate("/login")
 
 <Link to='/'>
 <Box>
-    <Image src="https://cdn1.tripoto.com/assets/2.9/img/logo/tripoto.svg" alt="logo"></Image>
+    <Image w="50px" src="/logo/Travel Buddy.png" alt="logo"></Image>
 </Box>
 </Link>
 
