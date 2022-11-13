@@ -25,7 +25,7 @@ style={{width:"40%" ,margin:"auto",fontSize:"15px" ,padding:"12px 15px" ,borderR
 
 
 
-<Container w="80%" border="2px solid red" margin="auto"  >
+<Container w="80%"  p={30} style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}  margin="auto"  >
 
 
 <Flex my={20}>

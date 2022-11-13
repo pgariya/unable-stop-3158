@@ -3,16 +3,16 @@ import  { Navigate} from "react-router-dom"
 import axios from "axios"
 import { AuthContext } from "./AuthContext";
 
-let initialdata={email:"" ,password:""}
+
 
 
 function Login() {
 
-  let [data,setdata] = useState(initialdata)
+  
   
   
   let value = useContext(AuthContext)
-  let {settoken ,status,setstatus} = value;
+  let {settoken ,status,setstatus,data,setdata} = value;
 console.log(value)
 
   
@@ -62,7 +62,6 @@ if(status===true){
           <label style={{fontSize:"20px"}}>
             Password :-
             <input
-           
               type="password"
               placeholder="password"
               onChange={handleChange}

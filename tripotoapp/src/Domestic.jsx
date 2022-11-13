@@ -7,11 +7,11 @@ import { NavLink } from 'react-router-dom';
 
 
 
-const MindfulRetreat = () => {
+const Domestic = () => {
     let [data,setdata] = useState([])
     useEffect( () =>{
 
-        axios.get(`https://equal-tortoiseshell-submarine.glitch.me/mindful`)
+        axios.get(`https://equal-tortoiseshell-submarine.glitch.me/domestic`)
         .then( (res) => setdata(res.data))
         .catch((err) => console.log(err))
 
@@ -23,16 +23,17 @@ const MindfulRetreat = () => {
     <Box>
 
 
-<div style={{display:"grid" , gridTemplateColumns:"repeat(3,1fr)" ,gap:"20px" }}>
+<div style={{display:"grid" , gridTemplateColumns:"repeat(4,1fr)" ,gap:"20px" }}>
 
 {
     data.map( (el) => <div key={el.id} >
 
 
     <Box style={{textAlign:"left",padding:"2px"}}   >
-        <NavLink to={`/mindfulPage/${el.id}`}>
+        <NavLink to={`/packages/${el.id}`}>
         <img src={el.banner} alt="minful imageee" style={{width:"100%" ,height:"220px" , borderRadius:"10px"}}></img>
         </NavLink>
+
 
         <Text fontSize={18} fontWeight='bold' color='teal' ml={5} > {el.descTitle} </Text>
 
@@ -60,4 +61,4 @@ const MindfulRetreat = () => {
   )
 }
 
-export default MindfulRetreat
+export default Domestic

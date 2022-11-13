@@ -4,9 +4,29 @@ import { Box, HStack ,Image ,Menu,MenuButton,MenuItem ,MenuList  } from '@chakra
 
 
 import { TriangleDownIcon  } from '@chakra-ui/icons'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { AuthContext } from './AuthContext'
 
 const Navbar = () => {
+
+  let {status,data,setdata ,setstatus} =useContext(AuthContext);
+ let Navigate = useNavigate()
+  let {email}= data
+
+  console.log(email,status)
+
+
+
+  let handlelogin =() =>{
+
+    setstatus(!status)
+Navigate("/login")
+
+
+
+  }
+
   return (
     <div>
 
@@ -43,7 +63,12 @@ const Navbar = () => {
 
 
 <Box>Forum</Box>
+
+<NavLink to='/packages'>
 <Box>Package</Box>
+
+</NavLink>
+
 
 
 <Box>
@@ -58,7 +83,10 @@ const Navbar = () => {
 </Box>
 
 
-<NavLink to='/login' end ><Box>Login</Box></NavLink>
+<NavLink to='/login' end >
+  <Box onClick={handlelogin}>{status ? "Logout" : "Login"}
+  </Box></NavLink>
+
 
 
 

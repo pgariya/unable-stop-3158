@@ -11,7 +11,7 @@ import { AppContext } from './AppContext';
 
 
 
-const SingleMindful = () => {
+const SingleDomestic = () => {
 
     let [data,setdata] = useState([]);
     let [loading,setloading] = useState(false)
@@ -30,7 +30,7 @@ const SingleMindful = () => {
 
 useEffect( () => {
        setloading(true)
-    axios.get(`https://equal-tortoiseshell-submarine.glitch.me/user/${params.id}`)
+    axios.get(`https://equal-tortoiseshell-submarine.glitch.me/domestic/${params.id}`)
     .then( (res) => {   setdata(res.data)  
      setloading(false)  } )
     .catch((err) => console.log(err))
@@ -166,7 +166,7 @@ if(loading){
 </Box>
 
 
-<Box w='32%' h='750px' p={15}  ml={15}  style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}}>
+<Box w='32%' h='750px' p={20}  ml={15}  style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}}>
 
 
 
@@ -193,12 +193,9 @@ if(loading){
 </label>
 
 <Text textAlign='left' fontWeight='bold'>Type of Room</Text>
-
-<Box textAlign='left'>
-<Checkbox size='md'  defaultChecked border='2px solid grey'>
+<Checkbox size='md' colorScheme='green' defaultChecked border='1px solid grey'>
+Deluxe rooms on twin sharing basis
   </Checkbox>
-  Deluxe rooms on twin sharing basis
-</Box>
 
 <Box display='flex' justifyContent='space-between' mt={10} w="95%">
     <Box w='75%' >
@@ -212,10 +209,8 @@ if(loading){
     </Box>
 </Box>
 
- <Box textAlign='left'>
-<Checkbox size='md' defaultChecked  border='2px solid grey'> </Checkbox>
-Send me Update For this Booking on
- </Box>
+ 
+<Checkbox defaultChecked colorScheme='red' border='2px solid grey'>Send me Update For this Booking on </Checkbox>
 
 <Box fontWeight='bold' display='flex' justifyContent='space-around' fontSize='20px'>
     <Text >Amount</Text>
@@ -253,4 +248,4 @@ Send me Update For this Booking on
   )
 }
 
-export default SingleMindful
+export default SingleDomestic

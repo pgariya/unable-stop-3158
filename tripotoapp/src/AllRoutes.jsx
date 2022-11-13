@@ -8,8 +8,10 @@ import Packages from './Packages'
 import Payment from './Payment'
 import PrivateRoute from './PrivateRoute'
 import Singapore from './Singapore'
+import SingleDomestic from './SingleDomestic'
 import SingleMindful from './SingleMindful'
 import SinglePartnership from './SinglePartnership'
+import Success from './Success'
 
 const AllRoutes = () => {
   return (
@@ -25,7 +27,9 @@ const AllRoutes = () => {
 <Route path='/mindfulPage' element={<PrivateRoute><MindfulPage/></PrivateRoute>}></Route>
 <Route path='/mindfulPage/:id' element={<PrivateRoute><SingleMindful/></PrivateRoute>}></Route>
 <Route path='/login' element={<Login/>}></Route>
-<Route path='//mindfulPage/:id/payment' element={<Payment/>}></Route>
+<Route path='/mindfulPage/:id/payment' element={<Payment/>}></Route>
+<Route path='/mindfulPage/:id/payment/success' element={<Success/>}></Route>
+<Route path='/packages/:id' element={<PrivateRoute><SingleDomestic/></PrivateRoute>}></Route>
 
 </Routes>
 

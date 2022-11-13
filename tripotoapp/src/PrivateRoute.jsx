@@ -7,7 +7,7 @@ function PrivateRoute({children}) {
 let {status} = useContext(AuthContext);
 
 if(!status){
-    return <Navigate to='/'></Navigate>
+    return <Navigate to='/login'></Navigate>
 }
 return children
 
